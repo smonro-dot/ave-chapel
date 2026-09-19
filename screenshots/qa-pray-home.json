@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/pray",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Ave",
+      "hasCanvas": false,
+      "bodyTextLen": 513,
+      "bodyTextHash": "86326382162d15ff4fb924a7f649b15c5d20956d4b9eff8e6789628fffcc1231",
+      "bodyTextPrefix": "AVE What do you want to pass on this week? Your son is little. W",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-pray-home.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Ave",
+      "hasCanvas": false,
+      "bodyTextLen": 513,
+      "bodyTextHash": "86326382162d15ff4fb924a7f649b15c5d20956d4b9eff8e6789628fffcc1231",
+      "bodyTextPrefix": "AVE What do you want to pass on this week? Your son is little. W",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-pray-home-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-pray-home.json"
+}

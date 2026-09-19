@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0a0c;
+  --color-fg: #f3ece0;
+  --color-muted: #9a8f86;
+  --color-subtle: #6e655c;
+  --color-accent: #e8dcc4;
+  --color-accent-fg: #0b0a0c;
+  --color-rose: #8a6a6e;
+  --color-gold: #c4a574;
+  --color-surface: #161318;
+  --color-surface-2: #1e1a20;
+  --color-border: #2a2528;
+  --color-word-lit: #fff6e4;
+  --color-glow-hot: #e8c48a;
+  --color-chain-light: #efe0c4;
+  --color-chain-dark: #6a5132;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+  body {
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@keyframes bead-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(232, 220, 196, 0.15));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(232, 220, 196, 0.7));
+  }
+}
+
+@keyframes rosary-sway {
+  0%,
+  100% {
+    transform: rotate(-1.1deg);
+  }
+  50% {
+    transform: rotate(1.1deg);
+  }
+}
+
+@keyframes bead-live {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes bead-pray {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.animate-bead-pulse {
+  animation: bead-pulse 2.4s ease-in-out infinite;
+}
+
+.animate-rosary-sway {
+  transform-origin: 50% 14%;
+  animation: 14s ease-in-out infinite rosary-sway;
+}
+
+.animate-bead-live {
+  transform-origin: center;
+  animation: bead-live 2.2s ease-in-out infinite;
+}
+
+.animate-bead-pray {
+  transform-origin: center;
+  animation: bead-pray 1.8s ease-in-out infinite;
+}
+
+.bead-rest {
+  transform-origin: center;
+}
+
+.rosary-session {
+  mask-image: linear-gradient(to bottom, black 0%, black 62%, transparent 92%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bead-pulse,
+  .animate-rosary-sway,
+  .animate-bead-live,
+  .animate-bead-pray {
+    animation: none;
+  }
+}
